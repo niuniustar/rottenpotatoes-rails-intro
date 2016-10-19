@@ -29,7 +29,7 @@ class MoviesController < ApplicationController
     @all_ratings=['G','PG','PG-13','R']
     
     if params[:commit] == "Refresh" and params[:ratings].nil?
-      @ratings=nil
+      @ratings=['G','PG','PG-13','R']
       session[:ratings] = nil
     elsif params[:ratings]
       @ratings=params[:ratings]
